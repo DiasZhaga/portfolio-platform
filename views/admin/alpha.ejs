@@ -1,0 +1,46 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="admin-title">
+    <h2>Graphs and Charts</h2>
+  </div>
+
+  <div style="width: 80%; margin: auto;">
+    <h3>New York Air Quality</h3>
+    <canvas id="airQualityChart" width="400" height="200"></canvas>
+</div>
+
+<script>
+    const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+    const airQualityData = [10, 12, 8, 15, 11, 13]; 
+
+    const ctx = document.getElementById('airQualityChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'PM2.5 Levels (µg/m³)',
+                data: airQualityData,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'PM2.5 Levels (µg/m³)'
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
+                }]
+            }
+        }
+    });
+</script>
