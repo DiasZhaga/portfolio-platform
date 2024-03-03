@@ -7,8 +7,8 @@ const jwtSecret = process.env.JWT_SECRET;
 const nodemailer = require('nodemailer');
 const Mailgen = require('mailgen');
 
-const EMAIL = '221234@astanait.edu.kz';
-const PASSWORD = 'e7zbiMa3KWWcY';
+const EMAIL = 'YOUR_EMAIL';
+const PASSWORD = 'YOUR_PASSWORD';
 
 const regLayout = '../views/layouts/signin';
 
